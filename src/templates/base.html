@@ -1,0 +1,139 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block head_title %}Properties{% endblock head_title %}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+	<link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' />
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<!-- Bootstrap core CSS -->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+{% block head_extra %} {% endblock head_extra %}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<nav class="navbar navbar-expand-lg navStyle">
+  <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image" height="60px"></a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+    <span><i class="fas fa-align-right iconStyle"></i></span>
+      </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav ml-auto navList">
+      <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>HOME<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item">
+       <a href="services.html" class="nav-link"><i class="fas fa-cogs"></i>Services</a>
+      </li>
+      <li class="nav-item">
+     <a href="portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i>Portfolio</a>
+         </li>
+     <li class="nav-item">
+      <a href="contact.html" class="nav-link"><i class="fas fa-phone"></i>Contact</a>
+      </li>
+     <li class="nav-item">
+     <a href="about.html" class="nav-link"><i class="fas fa-users"></i>About</a>
+     </li>
+    </ul>
+  </div>
+ </nav>
+        
+{% block content %} {% endblock content %}
+
+
+   <!-- Footer -->
+<footer class="page-footer font-small  pt-5" style=" background-color: #1c2a48;">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Lynmac Property</h5>
+        <p>Is an established Real estate firm in kenya registered in 2013.We specialize in Residential and commercial Properties in the areas of Property Management</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Contact Us</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">4100, 1Chekmula Buliding , 3rd Floor Kisumu</a>
+          </li>
+          <li>
+            <a href="#!">+254 726 681 845+254 735 100 856</a>
+          </li>
+          <li>
+            <a href="#!">info@lynmac.co.ke</a>
+          </li>
+          <li>
+            <a href="#!">www.lynmac.co.ke</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Services</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Maintenance and Repairs</a>
+          </li>
+          <li>
+            <a href="#!">Letting, Rent collection</a>
+          </li>
+          <li>
+            <a href="#!">Property sales & Marketing</a>
+          </li>
+          <li>
+            <a href="#!">Property Development</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> xycoders.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
