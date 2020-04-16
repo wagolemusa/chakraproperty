@@ -1,8 +1,8 @@
 from django import forms
 
-from .models import Posts
+from .models import Post
 
-class PostForms(forms.models):
+class PostForms(forms.ModelForm):
 	title = forms.CharField(widget=forms.TextInput(attrs={
 		'class': 'form-control'
 		})) 
@@ -19,7 +19,10 @@ class PostForms(forms.models):
 		'class': 'form-control'
 		}))
 	bath = forms.IntegerField(widget=forms.NumberInput(attrs={
-		'class': 'form-contral'
+		'class': 'form-control'
+		}))
+	content = forms.CharField(widget=forms.Textarea(attrs={
+		'class': 'form-control'
 		}))
 	publish = forms.DateField(widget=forms.SelectDateWidget)
 
