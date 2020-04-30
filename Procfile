@@ -1,2 +1,2 @@
-web: gunicorn chakraproperty.wsgi:app
+web: gunicorn chakraproperty.wsgi --log-file -
 
