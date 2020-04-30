@@ -1,6 +1,15 @@
+.social-style-one li a {
+    color: #ff4e3c;
+    width: 37px;
+    height: 37px;
+    line-height: 38px;
+    border-radius: 50%;
+    background: #fff;
+}
 .navbar
 {
-    background-color: black;
+    background-color: #222222;
+    /*font-size: 16px;*/
 }
 .navbar .brand-navbar img:hover
 {
@@ -14,7 +23,7 @@ padding: 0px 30px 0px 0px;
     color: white;
     margin: 10px 0px 0px 10px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 18px;
 }
 .navbar ul li a .fas{
     padding-right:5px; 
@@ -26,7 +35,7 @@ padding: 0px 30px 0px 0px;
 .navbar ul li.active > a {
     color: #15b000;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
     border-left: 3px solid #15b000;
     border-radius: 40px;
 }
@@ -35,12 +44,32 @@ padding: 0px 30px 0px 0px;
     color: #15b000;
 }
 
+/*.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    
+}*/
+
+.top-bar {
+    position: relative;
+    background: #ff4e3c;
+    line-height: 50px;
+}
+.top-bar .top-bar-text li {
+    color: #fff;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+
 /*=====================================Slier============================================*/
 
 
 header .carousel-inner .item
 {
-    height: 100vh;
+    height: 500px;
 }
 .carousel-caption
 {
@@ -54,6 +83,8 @@ header .carousel-inner .item
     text-transform: uppercase;
     animation-delay: 1s;
     animation-duration: 2s;
+            padding-top: 80px;
+
 }
 .carousel-caption p
 {
@@ -123,3 +154,77 @@ header .carousel-inner .item
     }
 }
 
+@media only screen and (max-width:480px)
+{
+    .carousel-inner>.item>img {
+        line-height: 1;
+        height: 350px;
+    }
+}
+
+.show span{
+    font-size: 17px;
+}
+
+.show b {
+    font-size: 20px;
+    color: #3E4551;
+}
+
+.show h1{
+    color: #9933CC;
+    font-weight: 600; 
+    text-align: center; 
+    font-size: 2.5rem;
+}
+
+.imagee h5{
+    color: #4285f4;
+}
+
+.imagee i{
+  color: #ff3547!important;
+  font-size: 2em;
+  padding-right: 15px;
+}
+
+.imagee li{
+    font-size: 1.1em;
+}
+
+.design h4{
+    color: #00C851;
+    font-size: 1.3em;
+    font-weight: 600
+}
+
+.design h5{
+    font-size: 1.2em; 
+    color: #4B515D;
+}
+
+.design h1{
+    font-size: 1.8em; 
+    color:#4B515D;
+}
+
+.design li{
+   color: #ff4444; 
+   font-size: 1.4em;
+}
+
+.design2 li{
+    color: #00C851; 
+    font-size: 1.5em;
+}
+
+.design2 b{
+    color: #4B515D;
+    font-size: 1.1em;
+}
+
+.design2 h6{
+    color: #3E4551;
+    font-size: 1.5em;
+    font-weight: 600;
+}
