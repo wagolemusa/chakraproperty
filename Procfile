@@ -1,2 +1,2 @@
-web: gunicorn chakraproperty/chakraproperty.wsgi:app
+web: gunicorn chakraproperty.wsgi:app
 
