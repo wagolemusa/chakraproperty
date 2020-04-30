@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -32,3 +33,15 @@ class Post(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	def get_obsolute_url(self):
+		return reverse("posts:detail", kwargs={"id": self.id})
+
+class Images(models.Model):
+	post = models.ForeignKey(Post,on_delete=models.CASCADE,)
+	image = models.ImageField(upload_to="upload_location",
+		null=True,
+		blank=True)
+
+	def __str__(self):
+		return self.post.title + "Image"

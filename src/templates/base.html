@@ -10,8 +10,10 @@
 
 	 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 
-	<link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' />
-
+	<!-- <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' /> -->
+<!-- <link rel="stylesheet" href='{% static "css/style.css" %}'/>
+ -->
+ <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}'/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 <!-- Bootstrap core CSS -->
 
@@ -27,29 +29,108 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<nav class="navbar navbar-expand-lg navStyle">
+
+<div class="top-bar" style="position: relative;
+          background: #ff4e3c;
+          line-height: 1em;">
+          <br/>
+        <div class="container">
+          <div class="row d-flex align-items-center">
+          <div class="col-md-6">
+              <p style="color: #ffffff; font-weight: 600; font-weight: 16px;"><i class="fas fa-phone-square" style="color: #ffffff; font-size: 20px;"></i> &nbsp;&nbsp;+254 722 273 741 &nbsp;&nbsp;&nbsp;<i class="far fa-envelope" style="color: #ffffff; font-size: 20px;"></i> &nbsp;info@Chakaraproperties.co.Ke</p>
+        </div>
+      <div class="col-md-6">
+        <div class="d-flex justify-content-md-end justify-content-between">
+          <ul class="social-custom list-inline">
+           <li class="list-inline-item"><a href="#"><i class="fab fa-facebook" style="color: #ffffff; font-size: 25px;"></i></a></li>
+           <li class="list-inline-item"><a href="#"><i class="fab fa-twitter" style="color: #ffffff; font-size: 25px;"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-skype" style="color: #ffffff; font-size: 25px;"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-envelope" style="color: #ffffff; font-size: 25px;"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<nav class="navbar navbar-expand-lg navStyle sticky-top sticky-offset">
   <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image" height="60px"></a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
     <span><i class="fas fa-align-right iconStyle"></i></span>
       </button>
     <div class="collapse navbar-collapse" id="mainMenu">
       <ul class="navbar-nav ml-auto navList">
-      <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>HOME<span class="sr-only">(current)</span></a></li>
+      <li class="nav-item active"><a href='{% url "posts:home" %}' class="nav-link"><i class="fas fa-home"></i>HOME<span class="sr-only">(current)</span></a></li>
       <li class="nav-item">
-       <a href="services.html" class="nav-link"><i class="fas fa-cogs"></i>Services</a>
+       <a href='{% url "posts:about" %}' class="nav-link"><i class="fas fa-cogs"></i>Services</a>
       </li>
       <li class="nav-item">
-     <a href="portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i>Portfolio</a>
+     <a href='{% url "posts:all" %}' class="nav-link"><i class="fas fa-briefcase"></i>Properies</a>
          </li>
      <li class="nav-item">
-      <a href="contact.html" class="nav-link"><i class="fas fa-phone"></i>Contact</a>
+      <a href="" data-toggle="modal" data-target="#fullHeightModalRight" class="nav-link"><i class="fas fa-phone"></i>Contact</a>
       </li>
-     <li class="nav-item">
-     <a href="about.html" class="nav-link"><i class="fas fa-users"></i>About</a>
-     </li>
     </ul>
   </div>
  </nav>
+
+ <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullHeightModalRight">
+  Launch demo modal
+</button> -->
+
+<!-- Full Height Modal Right -->
+<div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+  <div class="modal-dialog modal-full-height modal-right" role="document">
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel" style="color: #ff4444; font-size: 2em;">Contact Us</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <h4 class="card-title">Call Us.......</h4>
+      <i class="fas fa-phone" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;">+254 722 273 741 </b><br/>
+       <i class="fas fa-phone" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;">+254 722 273 741 </b><br/>
+         <i class="fas fa-phone" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;">+254 740 302 130 </b><br/>
+        <hr/>
+    <h4 class="card-title">Email Us.......</h4>
+
+      <i class="far fa-envelope" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;">info@chakara.co.Ke </b><br/>
+      <i class="far fa-envelope" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;">info@Chakaraproperties.co.Ke </b><br/>
+        <hr/>
+      <h4 class="card-title">Find Us.......</h4>
+
+      <i class="fas fa-map-marker-alt" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;
+">Kondele by-pass off</b><br/>
+      <i class="fas fa-map-marker-alt" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;">Aiport-Busia Road</b><br/>
+      <i class="fas fa-map-marker-alt" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;
+">P.O.Box 3909-40100</b><br/>
+      <i class="fas fa-map-marker-alt" style=" color: #00C851; 
+        font-size: 1.5em;"></i>&nbsp; &nbsp; <b style="color: #757575;
+">Kisumu-Kenya</b>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Full Height Modal Right -->
         
 {% block content %} {% endblock content %}
 
@@ -67,8 +148,9 @@
       <div class="col-md-6 mt-md-0 mt-3">
 
         <!-- Content -->
-        <h5 class="text-uppercase">Lynmac Property</h5>
-        <p>Is an established Real estate firm in kenya registered in 2013.We specialize in Residential and commercial Properties in the areas of Property Management</p>
+        <h5 class="text-uppercase">Chakra Property Limited</h5>
+        <p>Chakra is the technical term for excellent worker who never make any mistake</p>
+        <p>This symbolizes reliability, consistecy and dependability, the core philosophy of Chakra Estate Management</p>
 
       </div>
       <!-- Grid column -->
@@ -83,16 +165,17 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="#!">4100, 1Chekmula Buliding , 3rd Floor Kisumu</a>
+            <a href="#!">Kondele by-pass off, 1Aiport-Busia Road , P.O.Box 3909-40100</a>
           </li>
           <li>
-            <a href="#!">+254 726 681 845+254 735 100 856</a>
+            <a href="#!">+254 722 273 741 +254 740 302 130</a>
           </li>
           <li>
-            <a href="#!">info@lynmac.co.ke</a>
+            <a href="#!">info@chakara.co.Ke</a>
           </li>
           <li>
-            <a href="#!">www.lynmac.co.ke</a>
+            <a href="#!">info@Chakaraproperties.co.Ke
+</a>
           </li>
         </ul>
 
