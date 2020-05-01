@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% include "nave.html" %} 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<div class="container-fluid">
+<div class="row">
+	<div class="col-md-9">
+		<!-- 	<img src="{{ instance.image.url }}" class="img-fluid" alt="Responsive image" 
+      class="img-fluid z-depth-1" width="940px" height="500px" /> -->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+   	<li data-target="#myCarousel" data-slide-to="4"></li> 
+</ol>
+<!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
+   {% for p in instance.images_set.all %}
+    {% if forloop.counter == 1 %}
+    <div class="item active">
+    {% else %}
+    <div class="item">
+    {% endif %}
+    <img src="{{ p.image.url }}" alt="Image" width="960px" style="height: 600px;">
+  <div class="carousel-caption">
+ <!--<h3>{{ p.title }}</h3>
+    <p>{{ p.teaser }}</p -->
+   </div>
+    </div>
+    {% endfor %}
+  </div>
+ <!-- Left and right controls -->
+ <a class="left carousel-control" href="#myCarousel" role="			button" data-slide="prev">
+ 	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+ 	<span class="sr-only">Previous</span>
+ </a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<div class="card">
+<div class="card-body">
+	<b style="font-size: 1.5rem;
+font-weight: 400;
+line-height: 2;
+text-align: left;">{{ instance.content }}</b>
+</div>
+</div>
+
+</div>
+<div class="col-md-3">
+	<div class="card">
+		<div class="card-body">
+		<div class="show">
+		<h1>{{ title }}</h1>
+		<hr>
+		<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <b>Price</b>
+    <span class="badge badge-pill badge-success">{{ instance.price }}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <b>Location</b>
+    <span class="badge badge-pill badge-success">{{ instance.location}}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <b>For</b>
+    <span class="badge badge-pill badge-success">{{ instance.category }}</span>
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    <b>Bedroom</b>
+    <span class="badge badge-pill badge-success">{{ instance.beds }}</span>
+  </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    <b>Bathrooms</b>
+    <span class="badge badge-pill badge-success">{{ instance.bath }}</span>
+  </li>
+	</ul>
+	</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">
+		    <div class="imagee">
+      <hr>
+      <h3 style="color: #9933CC
+; font-weight: 600; text-align: center; font-size: 2.5rem;">Managing Agent</h3>
+      <hr>
+   <center>
+     <img class="rounded-lg" src="../static/musa.jpg" width="150" height="150" />
+     <br/><br/>
+
+     <h3 style="color: #4285f4!important;font-weight: 500; font-weight: 2em;">JOSHNSON O. OKWAMA</h3>
+     <h4 style="color: #4285f4!important; font-weight: 2em;">DIRECTOR</h4>
+   </center>
+   <ul class="list-group list-group-flush">
+  <ul class="list-group">
+    <li class="list-group-item">
+    <i class="fas fa-phone-volume"></i><b style="font-size: 1.2em;">+254 722 273 741 +254 740 302 130</b>
+    </li>
+    <li class="list-group-item">
+     <i class="fas fa-map-marker-alt"></i>
+     <b style="font-size: 1.2em;">Kondele by-pass off, P.O.Box 3909-40100</b>  
+   <li class="list-group-item">
+   		<i class="fab fa-linkedin-in"></i> <b style="font-size: 1.2em">info@Chakaraproperties.co.Ke</b>
+    </li>
+  </ul>
+</ul>
+</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<h1 class="card-title">Related Properties</h1>
+
+{% include "latest.html" %}
+
+</div>
+{% endblock content %}
