@@ -27,7 +27,7 @@ SECRET_KEY = 'm0jr=sh*_*71r4ipa9efgymt5b@^*$l0=45q)goifn(legg*k&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://chakraproperty.herokuapp.com','0.0.0.0', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://chakraproperty.herokuapp.com']
 
 
 # Application definition
