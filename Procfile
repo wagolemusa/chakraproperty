@@ -1,1 +1,1 @@
-web: gunicorn chakra.chakra.wsgi
+web: gunicorn chakra.wsgi
