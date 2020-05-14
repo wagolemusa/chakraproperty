@@ -9,8 +9,10 @@ from .views import (
 	about,
 	show,
 	more,
+	service,
 	latest,
 	post_delete,
+
 
 )
 
@@ -25,6 +27,7 @@ urlpatterns = [
 	path('all/', property_view, name="all"),
 	path('<int:id>/delete/', post_delete),
 	path('more/', more, name="more"),
+	path('service/', service, name="service"),
 	path('latest', latest, name='latest')
 
 
