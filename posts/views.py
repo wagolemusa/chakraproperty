@@ -24,7 +24,7 @@ def home(request):
 			Q(price__icontains=query)|
 			Q(location__icontains=query)
 			).distinct()
-	paginator = Paginator(queryset_list, 8)
+	paginator = Paginator(queryset_list, 4)
 	page = request.GET.get('page')
 	querySet = paginator.get_page(page)
 
@@ -122,6 +122,9 @@ def about(request):
 
 def more(request):
 	return render(request, "more.html")
+
+def service(request):
+	return render(request, "service.html")
 
 def latest(request):
 	qureyset_list = Post.objects.order_by("-timestamp")
